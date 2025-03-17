@@ -1,0 +1,85 @@
+body {
+  background-color: black;
+  font-family: Pacifico, sans-serif;
+}
+a {
+  width: 75%;
+  margin-left: 130px;
+  border-radius: 10px;
+}
+h2 {
+  color: white;
+  font-size: 30px;
+  margin-left: 50px;
+}
+img {
+  width: 75%;
+  margin-left: 50px;
+  border-radius: 20px;
+}
+p{
+  font-size: 20px;
+  color: white;
+  margin-top: 25px;
+}
+.coracao {
+  color: red;
+    font-size: 30px;  /* Tamanho do coração */
+    position: absolute;
+    bottom: -100px;   /* Começa fora da tela */
+    animation: subir 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Animação de subida */
+@keyframes subir {
+    0% {
+        transform: translateY(0); /* Começa no fundo */
+        opacity: 0;               /* Começa invisível */
+    }
+    25% {
+        opacity: 1; /* Começa a aparecer */
+    }
+    50% {
+        transform: translateY(-300px); /* Sobe para 300px */
+        opacity: 1;                    /* Visível */
+    }
+    75% {
+        opacity: 1; /* Mantém visível */
+    }
+    100% {
+        transform: translateY(-500px); /* Sobe mais 200px */
+        opacity: 0;                   /* Fica invisível */
+    }
+}
+
+/* Gerando posições aleatórias e animações diferentes */
+.coracao:nth-child(1) {
+    left: 20%; /* Lado esquerdo da tela */
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+.coracao:nth-child(2) {
+    left: 40%; /* Lado esquerdo da tela */
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.coracao:nth-child(3) {
+    left: 60%; /* Lado central da tela */
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+.coracao:nth-child(4) {
+    left: 80%; /* Lado direito da tela */
+    animation-duration: 7s;
+    animation-delay: 1.5s;
+}
+
+.coracao:nth-child(5) {
+    left: 50%; /* Centro da tela */
+    animation-duration: 6s;
+    animation-delay: 0.5s;
+}
